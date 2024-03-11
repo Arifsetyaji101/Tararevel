@@ -2,7 +2,10 @@
     "name": "laravel/laravel",
     "type": "project",
     "description": "The Laravel Framework.",
-    "keywords": ["framework", "laravel"],
+    "keywords": [
+        "framework",
+        "laravel"
+    ],
     "license": "MIT",
     "post-install-cmd": [
         "php artisan clear-compiled",
@@ -38,6 +41,11 @@
         }
     },
     "scripts": {
+        "vercel": [
+            "@php -v",
+            "npm -v",
+            "npm install && npm run dev"
+        ],
         "post-autoload-dump": [
             "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
             "@php artisan package:discover --ansi"
@@ -64,5 +72,4 @@
     },
     "minimum-stability": "dev",
     "prefer-stable": true
-    
 }
